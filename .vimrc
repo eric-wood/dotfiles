@@ -59,7 +59,7 @@ endif
 hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
 
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
-
+nmap <silent> <leader>o :FufCoverageFile<CR>
 nmap <silent> <leader>p :NERDTreeToggle<CR>
 	
 " For CtrlP
