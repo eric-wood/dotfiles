@@ -20,14 +20,14 @@ servers = (
     ssl_verify = "no";
     autoconnect = "yes";
   },
-	{
-		address = "irc.net.tamu.edu";
-		chatnet = "tamu";
-		port = "6667";
-		use_ssl = "no";
-		ssl_verify = "no";
-		autoconnect = "yes";
-	}
+  {
+    address = "irc.net.tamu.edu";
+    chatnet = "tamu";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  }
 );
 
 chatnets = {
@@ -201,6 +201,7 @@ statusbar = {
     };
     remove = { disabled = "yes"; };
     disable = { disabled = "yes"; };
+    placement = { items = { }; disabled = "yes"; };
     window_inact = {
       items = {
         barstart = { priority = "100"; };
