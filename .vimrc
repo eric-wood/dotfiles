@@ -1,20 +1,21 @@
+set nocompatible
 set number
 set autoindent
-set smartindent
+"set smartindent
 set tabstop=2
 set shiftwidth=2
 set showmatch
 set incsearch
 set ruler
+filetype on
+filetype indent on
 filetype plugin on
+syntax enable
+
 set laststatus=2
 
-" For python, smartindent sucks. It messes up comments
-" and all kinds of other shenanigans. This makes life easier.
-autocmd BufRead *.py set nosmartindent
-autocmd BufRead *.py im :<CR> :<CR><TAB>
+compiler ruby
 
-syntax enable
 
 " For gVim or MacVim...
 if has("gui_running")
