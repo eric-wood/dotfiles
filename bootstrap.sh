@@ -20,6 +20,8 @@ preserve_stuff .screenrc
 preserve_stuff .tmux.conf
 preserve_stuff .vim
 preserve_stuff .vimrc
+preserve_stuff .gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 
 # irssi stuff is a different matter, though
 preserve_stuff .irssi/config

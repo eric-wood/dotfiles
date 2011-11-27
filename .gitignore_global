@@ -1,0 +1,6 @@
+*.swp
+*.swo
+*.sqlite
+.DS_Store*
+Thumbs.db
+
