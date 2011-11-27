@@ -29,13 +29,6 @@ if has("gui_running")
 	set go-=L
 	set showtabline=1
 	
-	" Statusline - apparently not compatible with cli Vim yet
-	set statusline=
-	set statusline+=%<
-	set statusline+=%{fugitive#statusline()}\ 
-	set statusline+=%n:%f\ %h%m%r\ 
-	set statusline+=%=%-14.(%l,%c%V%)\ %P
-	
 	" For the supa cool cursor line!
 	set cursorline
 	autocmd WinEnter * setlocal cursorline
@@ -62,6 +55,9 @@ hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
 nmap <silent> <leader>o :FufCoverageFile<CR>
 nmap <silent> <leader>p :NERDTreeToggle<CR>
+	
+" Statusline
+set statusline=%m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 	
 " For CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.swp/*
