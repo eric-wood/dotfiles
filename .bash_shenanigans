@@ -45,4 +45,4 @@ export TERM=xterm-256color
 
 export EDITOR=vim
 
-alias ll='ls -al'
+alias ll='ls -hal'
