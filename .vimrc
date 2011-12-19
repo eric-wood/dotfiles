@@ -2,6 +2,7 @@ set nocompatible
 set number
 set autoindent
 "set smartindent
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set showmatch
@@ -59,7 +60,17 @@ nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 	
 " Statusline
 set statusline=%m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
-	
+
+"====================================
+" Vundle
+"====================================
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'	
+
 " For CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.swp/*
-let g:ctrlp_working_path_mode = 2
+"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.swp/*
+"let g:ctrlp_working_path_mode = 2
