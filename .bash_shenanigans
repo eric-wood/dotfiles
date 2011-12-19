@@ -46,3 +46,5 @@ export TERM=xterm-256color
 export EDITOR=vim
 
 alias ll='ls -hal'
+
+set -o vi
