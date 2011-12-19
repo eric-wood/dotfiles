@@ -64,12 +64,12 @@ set statusline=%m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 "====================================
 " Vundle
 "====================================
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'	
+"Bundle 'gmarik/vundle'	
 
 " For CtrlP
 "set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.swp/*
