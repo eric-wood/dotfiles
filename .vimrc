@@ -29,6 +29,11 @@ if has("gui_running")
 	set guioptions-=LlRrb
 	set go-=L
 	set showtabline=1
+
+  " In gVim/MacVim I prefer to have the tab bar always shown
+  " it keeps the window from changing size when I open new tabs without
+  " already having any open.
+  set showtabline=2
 	
 	" For the supa cool cursor line!
 	set cursorline
