@@ -68,7 +68,7 @@ nnoremap j gj
 nnoremap k gk
 	
 " Statusline
-set statusline=%m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
+set statusline=%{winnr()}%m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 
 "====================================
 " Vundle
