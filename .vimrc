@@ -9,14 +9,12 @@ set showmatch
 set incsearch
 set ruler
 filetype on
-filetype indent on
-filetype plugin on
+"filetype indent on
+"filetype plugin on
+filetype plugin indent on
 syntax enable
 
-set laststatus=2
-
 compiler ruby
-
 
 " For gVim or MacVim...
 if has("gui_running")
@@ -60,26 +58,30 @@ hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
 
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
 nmap <silent> <leader>o :FufCoverageFile<CR>
+nmap <silent> <leader>r :FufRenewCache<CR>
 nmap <silent> <leader>p :NERDTreeToggle<CR>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " remap j and k to scroll by visual lines
-nnoremap j gj
-nnoremap k gk
+"if !vimpager
+  nnoremap j gj
+  nnoremap k gk
+"endif
 	
 " Statusline
-set statusline=%{winnr()}%m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
+set laststatus=2
+set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
+let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
 
 "====================================
 " Vundle
 "====================================
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-"Bundle 'gmarik/vundle'	
-
-" For CtrlP
-"set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.swp/*
-"let g:ctrlp_working_path_mode = 2
+Bundle 'gmarik/vundle'	
+Bundle 'molok/vim-smartusline'
+"Bundle 'Lokaltog/vim-powerline'
+"Bundle 'FuzzyFinder'
