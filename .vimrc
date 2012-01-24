@@ -55,7 +55,7 @@ endif
 
 " For my biology notes.......
 let @h='H<sub>2</sub>O'
-let @+='<sup>+</sup>'
+let @s='<sup>+</sup>'
 
 "====================================
 " Colors
