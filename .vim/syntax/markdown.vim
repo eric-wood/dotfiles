@@ -7,6 +7,14 @@ if exists("b:current_syntax")
   finish
 endif
 
+" Fix indenting
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+" Shift+tab unindents in insert mode
+imap <S-Tab> <Esc><<i
+
 runtime! syntax/html.vim
 unlet! b:current_syntax
 

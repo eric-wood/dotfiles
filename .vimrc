@@ -50,6 +50,14 @@ else
 endif
 
 "====================================
+" Registers
+"====================================
+
+" For my biology notes.......
+let @h='H<sub>2</sub>O'
+let @+='<sup>+</sup>'
+
+"====================================
 " Colors
 "====================================
 
@@ -82,6 +90,6 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'	
-Bundle 'molok/vim-smartusline'
+"Bundle 'molok/vim-smartusline'
 "Bundle 'Lokaltog/vim-powerline'
 "Bundle 'FuzzyFinder'
