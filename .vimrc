@@ -49,13 +49,16 @@ else
 	colorscheme ir_black_term
 endif
 
-"====================================
-" Registers
-"====================================
+" When I'm writing markdown, it's typically prose.
+" Turn on spellchecking on markdown files
+if &ft == "markdown"
+    setlocal spell! spelllang=en_us
 
-" For my biology notes.......
-let @h='H<sub>2</sub>O'
-let @s='<sup>+</sup>'
+    " For my biology notes.......markdown doesn't do subscripts :'(
+    " Will remove this at the end of the semester
+    let @h='H<sub>2</sub>O'
+    let @s='<sup>+</sup>'
+endif
 
 "====================================
 " Colors
