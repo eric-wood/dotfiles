@@ -101,6 +101,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'mikewest/vimroom'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/haskell.vim'
+Bundle 'hail2u/vim-css3-syntax'
 
 " Note: keep an eye on Vundle's future HG support, since this
 " project uses HG.
