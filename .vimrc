@@ -16,6 +16,8 @@ syntax enable
 
 compiler ruby
 
+set cursorline
+
 " For gVim or MacVim...
 if has("gui_running")
 	set ofu=syntaxcomplete#Complete
@@ -34,7 +36,6 @@ if has("gui_running")
   set showtabline=2
 	
 	" For the supa cool cursor line!
-	set cursorline
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
 
