@@ -94,6 +94,18 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'	
-"Bundle 'molok/vim-smartusline'
-"Bundle 'Lokaltog/vim-powerline'
-"Bundle 'FuzzyFinder'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-markdown'
+Bundle 'mikewest/vimroom'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/haskell.vim'
+
+" Note: keep an eye on Vundle's future HG support, since this
+" project uses HG.
+" URLs:
+"   L9: https://bitbucket.org/ns9tks/vim-l9/
+"   FuzzyFinder: https://bitbucket.org/ns9tks/vim-fuzzyfinder/
+Bundle 'FuzzyFinder'
+Bundle 'L9'
