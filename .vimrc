@@ -8,10 +8,6 @@ set shiftwidth=2
 set showmatch
 set incsearch
 set ruler
-filetype on
-"filetype indent on
-"filetype plugin on
-filetype plugin indent on
 syntax enable
 
 compiler ruby
@@ -50,17 +46,6 @@ else
 	colorscheme ir_black_term
 endif
 
-" When I'm writing markdown, it's typically prose.
-" Turn on spellchecking on markdown files
-if &ft == "markdown"
-    setlocal spell! spelllang=en_us
-
-    " For my biology notes.......markdown doesn't do subscripts :'(
-    " Will remove this at the end of the semester
-    let @h='H<sub>2</sub>O'
-    let @s='<sup>+</sup>'
-endif
-
 "====================================
 " Colors
 "====================================
@@ -88,6 +73,9 @@ let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg
 "====================================
 " Vundle
 "====================================
+
+filetype off " for some reson this needs to be set first...
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -110,3 +98,23 @@ Bundle 'hail2u/vim-css3-syntax'
 "   FuzzyFinder: https://bitbucket.org/ns9tks/vim-fuzzyfinder/
 Bundle 'FuzzyFinder'
 Bundle 'L9'
+
+filetype plugin indent on " for some reason this needs to be next...
+
+"====================================
+" Language-specific Settings
+"====================================
+
+" When I'm writing markdown, it's typically prose.
+" Turn on spellchecking on markdown files
+if &ft == "markdown"
+  " Set up indent
+  set tabstop=4
+  set shiftwidth=4
+  setlocal spell! spelllang=en_us
+
+  " For my biology notes.......markdown doesn't do subscripts :'(
+  " Will remove this at the end of the semester
+  let @h='H<sub>2</sub>O'
+  let @s='<sup>+</sup>'
+endif
