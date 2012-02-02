@@ -117,4 +117,7 @@ if &ft == "markdown"
   " Will remove this at the end of the semester
   let @h='H<sub>2</sub>O'
   let @s='<sup>+</sup>'
+
+  " Get rid of the tab bar so there's nothing but black :)
+  set showtabline=0
 endif
