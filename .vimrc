@@ -96,8 +96,8 @@ Bundle 'hail2u/vim-css3-syntax'
 " URLs:
 "   L9: https://bitbucket.org/ns9tks/vim-l9/
 "   FuzzyFinder: https://bitbucket.org/ns9tks/vim-fuzzyfinder/
-Bundle 'FuzzyFinder'
 Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 filetype plugin indent on " for some reason this needs to be next...
 
