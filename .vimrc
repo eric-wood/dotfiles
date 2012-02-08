@@ -58,6 +58,8 @@ nmap <silent> <leader>o :FufCoverageFile<CR>
 nmap <silent> <leader>r :FufRenewCache<CR>
 nmap <silent> <leader>p :NERDTreeToggle<CR>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
+nmap <silent> <leader>ev :e ~/.vimrc<CR>
+nmap <silent> <leader>sv :source ~/.vimrc<CR>
 
 " remap j and k to scroll by visual lines
 "if !vimpager
