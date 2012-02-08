@@ -14,6 +14,8 @@ compiler ruby
 
 set cursorline
 
+let g:tex_flavor='latex'
+
 " For gVim or MacVim...
 if has("gui_running")
 	set ofu=syntaxcomplete#Complete
