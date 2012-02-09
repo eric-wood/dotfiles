@@ -127,5 +127,6 @@ if &ft == "markdown"
 endif
 
 if &ft == "tex"
+  " Render the current LaTeX file and open the resulting PDF
   nmap <silent> <leader>r :!pdflatex '%:p'; open '%:p:r.pdf'<CR><CR>
 endif
