@@ -121,3 +121,7 @@ if &ft == "markdown"
   " Get rid of the tab bar so there's nothing but black :)
   set showtabline=0
 endif
+
+if &ft == "tex"
+  nmap <silent> <leader>r :!pdflatex '%:p'; open '%:p:r.pdf'<CR><CR>
+endif
