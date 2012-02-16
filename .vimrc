@@ -48,8 +48,6 @@ else
 	"colorscheme ir_black_term
 endif
 
-colorscheme molokai
-
 "====================================
 " Colors
 "====================================
@@ -107,6 +105,8 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 
 filetype plugin indent on " for some reason this needs to be next...
+
+colorscheme molokai
 
 "====================================
 " Language-specific Settings
