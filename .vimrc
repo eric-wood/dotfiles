@@ -37,7 +37,7 @@ if has("gui_running")
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
 
-	colorscheme ir_black
+	"colorscheme ir_black
 else
 	" I hate this, but it's apparently the best way to get
 	" Vim to change cursors between different modes in iTerm2
@@ -45,8 +45,10 @@ else
 	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 	set mouse=a
 
-	colorscheme ir_black_term
+	"colorscheme ir_black_term
 endif
+
+colorscheme molokai
 
 "====================================
 " Colors
@@ -94,6 +96,7 @@ Bundle 'mikewest/vimroom'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/haskell.vim'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tomasr/molokai'
 
 " Note: keep an eye on Vundle's future HG support, since this
 " project uses HG.
