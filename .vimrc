@@ -48,13 +48,17 @@ else
 	"colorscheme ir_black_term
 endif
 
-"====================================
-" Colors
-"====================================
-
 " For the git part of the statusline
 hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
 
+" Statusline
+set laststatus=2
+set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
+let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
+
+"====================================
+" <leader> keystrokes and remappings
+"====================================
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
 nmap <silent> <leader>o :FufCoverageFile<CR>
 nmap <silent> <leader>r :FufRenewCache<CR>
@@ -64,15 +68,19 @@ nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
 
 " remap j and k to scroll by visual lines
-"if !vimpager
-  nnoremap j gj
-  nnoremap k gk
-"endif
-	
-" Statusline
-set laststatus=2
-set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
-let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
+nnoremap j gj
+nnoremap k gk
+
+" Stop using these, you lazy bastard!!
+" Disables arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 "====================================
 " Vundle
