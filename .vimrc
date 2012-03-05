@@ -14,6 +14,41 @@ compiler ruby
 
 set cursorline
 
+"====================================
+" Vundle
+"====================================
+" These need to be set up first, otherwise settings that
+" refer to certain plugins aren't loaded and we get errors
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'	
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-markdown'
+Bundle 'mikewest/vimroom'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/haskell.vim'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'tomasr/molokai'
+
+" Note: keep an eye on Vundle's future HG support, since this
+" project uses HG.
+" URLs:
+"   L9: https://bitbucket.org/ns9tks/vim-l9/
+"   FuzzyFinder: https://bitbucket.org/ns9tks/vim-fuzzyfinder/
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+"====================================
+
+filetype plugin indent on " for some reason this needs to be next...
+
 let g:tex_flavor='latex'
 
 " For gVim or MacVim...
@@ -36,7 +71,8 @@ if has("gui_running")
 	" For the supa cool cursor line!
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
-
+  
+  colorscheme railscasts
 else
 	" I hate this, but it's apparently the best way to get
 	" Vim to change cursors between different modes in iTerm2
@@ -82,40 +118,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-
-"====================================
-" Vundle
-"====================================
-
-filetype off " for some reson this needs to be set first...
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'	
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
-Bundle 'mikewest/vimroom'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/haskell.vim'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'tomasr/molokai'
-
-" Note: keep an eye on Vundle's future HG support, since this
-" project uses HG.
-" URLs:
-"   L9: https://bitbucket.org/ns9tks/vim-l9/
-"   FuzzyFinder: https://bitbucket.org/ns9tks/vim-fuzzyfinder/
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-
-filetype plugin indent on " for some reason this needs to be next...
-
-colorscheme railscasts
 
 "====================================
 " Language-specific Settings
