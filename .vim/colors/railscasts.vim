@@ -33,8 +33,8 @@ hi Search                    guibg=#5A647E ctermbg=60
 hi Visual                    guibg=#5A647E ctermbg=60
 hi LineNr                    guibg=#333435 ctermbg=236 guifg=#777777 ctermfg=243 gui=NONE
 hi StatusLine                guibg=#414243 ctermbg=238 gui=NONE
-hi StatusLineNC              guibg=#414243 ctermbg=238 gui=NONE
-hi VertSplit                 guibg=#414243 ctermbg=238 gui=NONE
+hi StatusLineNC              guibg=#333333 ctermbg=238 gui=NONE
+hi VertSplit                 guibg=#414243 guifg=#414243 ctermbg=238 ctermfg=238 gui=NONE
 
 " Folds
 " -----

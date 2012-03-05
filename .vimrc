@@ -56,10 +56,6 @@ set laststatus=2
 set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
 
-" Add a lone at 80 characters so I can keep myself in check :)
-highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
-match OverLength /\%>80v.\+/
-
 "====================================
 " <leader> keystrokes and remappings
 "====================================
@@ -118,7 +114,7 @@ Bundle 'FuzzyFinder'
 
 filetype plugin indent on " for some reason this needs to be next...
 
-colorscheme molokai
+colorscheme railscasts
 
 "====================================
 " Language-specific Settings
