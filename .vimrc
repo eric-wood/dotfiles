@@ -37,15 +37,16 @@ if has("gui_running")
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
 
-	"colorscheme ir_black
 else
 	" I hate this, but it's apparently the best way to get
 	" Vim to change cursors between different modes in iTerm2
-	let &t_SI = "\<Esc>]50;CursorShape=1\x7" 
-	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  "let &t_SI = "\<Esc>]50;CursorShape=1\x7" 
+	"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 	set mouse=a
 
-	"colorscheme ir_black_term
+  " My version of the railscasts colorscheme for the terminal
+  " still doesn't work very well, but molokai does so I'll use it for now
+	colorscheme molokai
 endif
 
 " For the git part of the statusline
