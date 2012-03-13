@@ -29,7 +29,7 @@ preserve_stuff .irssi/scripts
 
 # Now for the magic where I append my bash stuff onto 
 # the existing bash_profile without causing problems (in theory...)
-if ! cat ~/.bash_profile | grep -q ". $PWD/.bash_shenanigans"
+if ! cat ~/.bash_profile | grep -q ". $PWD/bash_shenanigans.sh"
 then
 	echo "Appending .bash_shenanigans to ~/.bash_profile"
 	echo ". $PWD/.bash_shenanigans" >> ~/.bash_profile

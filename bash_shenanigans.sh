@@ -33,7 +33,7 @@ branch_color ()
         echo -ne $color
 }
 
-PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \u@\[\]\w\[${c_sgr0}\]: '
+PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \u@\[\]\w\[${c_sgr0}\] ➤  '
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -47,4 +47,4 @@ export EDITOR=vim
 
 alias ll='ls -hal'
 
-set -o vi
+#set -o vi
