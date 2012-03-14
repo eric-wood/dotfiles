@@ -8,6 +8,7 @@ set shiftwidth=2
 set showmatch
 set incsearch
 set ruler
+set wildmenu
 syntax enable
 
 compiler ruby
@@ -72,7 +73,7 @@ if has("gui_running")
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
   
-  colorscheme railscasts
+  colorscheme solarized
 else
 	" I hate this, but it's apparently the best way to get
 	" Vim to change cursors between different modes in iTerm2
