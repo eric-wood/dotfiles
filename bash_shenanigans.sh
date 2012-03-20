@@ -33,7 +33,10 @@ branch_color ()
         echo -ne $color
 }
 
-PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \u@\[\]\w\[${c_sgr0}\] ➤  '
+# Uncomment this to get the username@path in the PS1 string.
+# On machines where I don't switch users it looks cleaner without it.
+#PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \u@\[\]\w\[${c_sgr0}\] ➤  '
+PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \[\]\w\[${c_sgr0}\] ➤  '
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -46,5 +49,3 @@ export TERM=xterm-256color
 export EDITOR=vim
 
 alias ll='ls -hal'
-
-#set -o vi
