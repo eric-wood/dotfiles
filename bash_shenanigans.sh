@@ -49,5 +49,7 @@ export TERM=xterm-256color
 export EDITOR=vim
 
 alias ll='ls -hal'
+alias vimrc='vim ~/.vimrc'
+alias mvimrc='mvim ~/.vimrc'
 
 set -o emacs
