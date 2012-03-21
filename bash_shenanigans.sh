@@ -47,4 +47,4 @@ export EDITOR=vim
 
 alias ll='ls -hal'
 
-#set -o vi
+set -o emacs

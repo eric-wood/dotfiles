@@ -1,7 +1,6 @@
 set nocompatible
 set number
 set autoindent
-"set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -74,6 +73,7 @@ if has("gui_running")
 	autocmd WinLeave * setlocal nocursorline
   
   colorscheme solarized
+  set background=dark
 else
 	" I hate this, but it's apparently the best way to get
 	" Vim to change cursors between different modes in iTerm2
@@ -119,29 +119,3 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-
-"====================================
-" Language-specific Settings
-"====================================
-
-" When I'm writing markdown, it's typically prose.
-" Turn on spellchecking on markdown files
-if &ft == "markdown"
-  " Set up indent
-  set tabstop=4
-  set shiftwidth=4
-  setlocal spell! spelllang=en_us
-
-  " For my biology notes.......markdown doesn't do subscripts :'(
-  " Will remove this at the end of the semester
-  let @h='H<sub>2</sub>O'
-  let @s='<sup>+</sup>'
-
-  " Get rid of the tab bar so there's nothing but black :)
-  set showtabline=0
-endif
-
-if &ft == "tex"
-  " Render the current LaTeX file and open the resulting PDF
-  nmap <silent> <leader>r :!pdflatex '%:p' && pdflatex '%:p' && pdflatex '%:p' && open '%:p:r.pdf' && rm '%:p:r.log' && rm '%:p:r.aux'<CR><CR>
-endif
