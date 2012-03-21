@@ -37,6 +37,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/haskell.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized'
 
 " Note: keep an eye on Vundle's future HG support, since this
 " project uses HG.
@@ -62,7 +63,7 @@ if has("gui_running")
 	set guioptions-=LlRrb
 	set go-=L
 	set showtabline=1
-
+  
   " In gVim/MacVim I prefer to have the tab bar always shown
   " it keeps the window from changing size when I open new tabs without
   " already having any open.
@@ -74,16 +75,18 @@ if has("gui_running")
   
   colorscheme solarized
   set background=dark
+  
+  " Solarized toggle
+  " I'm leaving this under the gVim-specific settings since it doesn't
+  " really work in the terminal and I'd rather not worry about it.
+  call togglebg#map("<leader>t")
 else
-	" I hate this, but it's apparently the best way to get
-	" Vim to change cursors between different modes in iTerm2
-  "let &t_SI = "\<Esc>]50;CursorShape=1\x7" 
-	"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 	set mouse=a
-
-  " My version of the railscasts colorscheme for the terminal
-  " still doesn't work very well, but molokai does so I'll use it for now
-	colorscheme molokai
+  
+  " Solarized shenanigans
+  set background=dark
+  let g:solarized_termcolors=256
+  colorscheme solarized
 endif
 
 " For the git part of the statusline
@@ -92,7 +95,7 @@ hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
 " Statusline
 set laststatus=2
 set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
-let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
+"let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
 
 "====================================
 " <leader> keystrokes and remappings
@@ -119,3 +122,4 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
