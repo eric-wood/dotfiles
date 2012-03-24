@@ -14,6 +14,11 @@ compiler ruby
 
 set cursorline
 
+" I keep all of my schoolwork in dropbox, which syncs all of my
+" swapfiles and drives me crazy. This relocates them to ~/.vim_swap
+" and keeps them out of the way.
+set directory^=$HOME/.vim_swap//,.
+
 "====================================
 " Vundle
 "====================================
