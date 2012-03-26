@@ -35,3 +35,7 @@ then
 	echo ". $PWD/.bash_shenanigans" >> ~/.bash_profile
 fi
 
+echo "Setting up Vim and installing Vundle stuffs..."
+mkdir ~/.vim_swap
+. vundle_setup.sh
+
