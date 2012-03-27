@@ -52,5 +52,6 @@ alias ll='ls -hal'
 alias evimrc='vim ~/.vimrc'
 alias gevimrc='gvim ~/.vimrc'
 alias bprofile='vim ~/.bash_profile'
+alias sbp='source ~/.bash_profile'
 
 set -o emacs
