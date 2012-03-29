@@ -87,7 +87,9 @@ if has("gui_running")
   " Solarized toggle
   " I'm leaving this under the gVim-specific settings since it doesn't
   " really work in the terminal and I'd rather not worry about it.
-  call togglebg#map("<leader>t")
+  " togglebg stupidly doesn't restrict itself to normal mode, so
+  " typing \t in insert mode toggles. Mapping to F1 is way better.
+  call togglebg#map("<F1>")
 else
 	set mouse=a
   
@@ -115,6 +117,7 @@ nmap <silent> <leader>p :NERDTreeToggle<CR>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
+nmap <silent> <leader>t :ToggleBG<CR>
 
 " remap j and k to scroll by visual lines
 nnoremap j gj
