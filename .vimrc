@@ -123,6 +123,10 @@ nmap <silent> <leader>t :ToggleBG<CR>
 nnoremap j gj
 nnoremap k gk
 
+" I get tired of pressing o+ESC to space things
+nnoremap <Return> o<Esc>
+nnoremap <S-Return> O<Esc>
+
 " Stop using these, you lazy bastard!!
 " Disables arrow keys
 nnoremap <up> <nop>
