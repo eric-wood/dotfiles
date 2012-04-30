@@ -45,14 +45,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Bundle 'kien/ctrlp.vim'
 
-" Note: keep an eye on Vundle's future HG support, since this
-" project uses HG.
-" URLs:
-"   L9: https://bitbucket.org/ns9tks/vim-l9/
-"   FuzzyFinder: https://bitbucket.org/ns9tks/vim-fuzzyfinder/
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 "====================================
 
 filetype plugin indent on " for some reason this needs to be next...
@@ -110,8 +104,6 @@ set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 " <leader> keystrokes and remappings
 "====================================
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
-nmap <silent> <leader>o :FufCoverageFile<CR>
-nmap <silent> <leader>r :FufRenewCache<CR>
 nmap <silent> <leader>p :NERDTreeToggle<CR>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 nmap <silent> <leader>ev :e ~/.vimrc<CR>
