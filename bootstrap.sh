@@ -15,7 +15,7 @@ function preserve_stuff
 
 # Glob all dotfiles with a few exceptions
 # Now I don't have to update this script much in the future!
-#preserve_stuff !(.git|.gitignore|*.swp|README.md|bootstrap.sh|.bash_shenanigans|.irssi)
+#preserve_stuff !(.git|.gitignore|*.swp|README.md|bootstrap.sh|bash_shenanigans.sh|.irssi)
 preserve_stuff .screenrc
 preserve_stuff .tmux.conf
 preserve_stuff .vim
@@ -31,8 +31,8 @@ preserve_stuff .irssi/scripts
 # the existing bash_profile without causing problems (in theory...)
 if ! cat ~/.bash_profile | grep -q ". $PWD/bash_shenanigans.sh"
 then
-	echo "Appending .bash_shenanigans to ~/.bash_profile"
-	echo ". $PWD/.bash_shenanigans" >> ~/.bash_profile
+	echo "Appending bash_shenanigans.sh to ~/.bash_profile"
+	echo ". $PWD/bash_shenanigans.sh" >> ~/.bash_profile
 fi
 
 echo "Setting up Vim and installing Vundle stuffs..."
