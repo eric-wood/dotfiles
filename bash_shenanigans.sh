@@ -36,7 +36,7 @@ branch_color ()
 # Uncomment this to get the username@path in the PS1 string.
 # On machines where I don't switch users it looks cleaner without it.
 #PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \u@\[\]\w\[${c_sgr0}\] ➤  '
-PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \[\]\w\[${c_sgr0}\] ➤  '
+PS1='[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \[\]\w\[${c_sgr0}\] ⚡ '
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -52,5 +52,6 @@ alias ll='ls -hal'
 alias evimrc='vim ~/.vimrc'
 alias gevimrc='gvim ~/.vimrc'
 alias bprofile='vim ~/.bash_profile'
+alias sbp='source ~/.bash_profile'
 
 set -o emacs

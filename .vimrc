@@ -42,18 +42,11 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-markdown'
 Bundle 'mikewest/vimroom'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/haskell.vim'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
+Bundle 'kien/ctrlp.vim'
 
-" Note: keep an eye on Vundle's future HG support, since this
-" project uses HG.
-" URLs:
-"   L9: https://bitbucket.org/ns9tks/vim-l9/
-"   FuzzyFinder: https://bitbucket.org/ns9tks/vim-fuzzyfinder/
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 "====================================
 
 filetype plugin indent on " for some reason this needs to be next...
@@ -87,7 +80,9 @@ if has("gui_running")
   " Solarized toggle
   " I'm leaving this under the gVim-specific settings since it doesn't
   " really work in the terminal and I'd rather not worry about it.
-  call togglebg#map("<leader>t")
+  " togglebg stupidly doesn't restrict itself to normal mode, so
+  " typing \t in insert mode toggles. Mapping to F1 is way better.
+  call togglebg#map("<F1>")
 else
 	set mouse=a
   
@@ -109,16 +104,19 @@ set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 " <leader> keystrokes and remappings
 "====================================
 nmap <silent> <leader>i :IndentGuidesToggle<CR>
-nmap <silent> <leader>o :FufCoverageFile<CR>
-nmap <silent> <leader>r :FufRenewCache<CR>
 nmap <silent> <leader>p :NERDTreeToggle<CR>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
+nmap <silent> <leader>t :ToggleBG<CR>
 
 " remap j and k to scroll by visual lines
 nnoremap j gj
 nnoremap k gk
+
+" I get tired of pressing o+ESC to space things
+nnoremap <Return> o<Esc>
+nnoremap <S-Return> O<Esc>
 
 " Stop using these, you lazy bastard!!
 " Disables arrow keys
