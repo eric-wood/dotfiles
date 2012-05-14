@@ -236,5 +236,7 @@ ignores = (
     level = "JOINS PARTS QUITS MODES";
     channels = ( "#tamulug", "#ccdc", "#austin", "##mac", "#ruby" );
   },
-  { mask = "MrWareWolf"; level = "ALL"; }
+  { mask = "MrWareWolf"; level = "ALL"; },
+  { mask = "adami1097"; level = "ALL"; },
+  { mask = "vectorshelve"; level = "ALL"; }
 );
