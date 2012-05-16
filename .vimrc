@@ -129,3 +129,9 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
+" Ignore stuff
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\.git$\|\.hg$\|\.svn$\',
+  \ 'file': '\.log$\|\.db$\'
+  \ }
+
