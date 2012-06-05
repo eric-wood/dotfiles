@@ -74,7 +74,7 @@ if has("gui_running")
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
   
-  colorscheme solarized
+  colorscheme railscasts
   set background=dark
   
   " Solarized toggle
@@ -109,6 +109,7 @@ nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
 nmap <silent> <leader>t :ToggleBG<CR>
+nmap <silent> ^p :CtrlPMixed<CR>
 
 " remap j and k to scroll by visual lines
 nnoremap j gj
