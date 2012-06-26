@@ -13,7 +13,7 @@ parse_git_branch ()
   else
           return 0
   fi
-  echo -e $gitver?!
+  echo -e $gitver
 }
 
 branch_color ()

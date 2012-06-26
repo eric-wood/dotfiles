@@ -10,6 +10,7 @@ prompt                  = {
   :RETURN       => "# => %s\n",
 }
 
+IRB.conf[:USE_READLINE] = true
 IRB.conf.delete(:AUTO_INDENT) # irb checks for presence, not content... stupid
 IRB.conf[:PROMPT][:AWESOME] = prompt
 IRB.conf[:PROMPT_MODE]      = :AWESOME
