@@ -74,7 +74,7 @@ if has("gui_running")
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
   
-  colorscheme railscasts
+  colorscheme molokai
   set background=dark
   
   " Solarized toggle
@@ -110,6 +110,10 @@ nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
 nmap <silent> <leader>t :ToggleBG<CR>
 nmap <silent> ^p :CtrlPMixed<CR>
+
+" When I have the brightness low I like to work with solarized light;
+" this keystroke makes it easy to switch to it on a whim
+nmap <silent> <leader>l :colorscheme solarized<CR>:set background=light<CR>
 
 " remap j and k to scroll by visual lines
 nnoremap j gj
