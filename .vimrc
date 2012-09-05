@@ -46,6 +46,7 @@ Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 "====================================
 
@@ -74,7 +75,7 @@ if has("gui_running")
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
   
-  colorscheme molokai
+  colorscheme Tomorrow-Night-Eighties
   set background=dark
   
   " Solarized toggle
