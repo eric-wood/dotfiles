@@ -31,7 +31,7 @@ branch_color ()
   echo -ne $color
 }
 
-PS1='(\[$(tput bold)\]\[$(tput setaf 4)\]\h\[${c_sgr0}\])[\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\]] \[\w\[${c_sgr0}\]\] ⚡ '
+export PS1='\[$(tput bold)\](\[$(tput setaf 4)\]\h\[$(tput sgr0)\])[\[$(branch_color)\]$(parse_git_branch)\[$(tput sgr0)\]] \w ⚡ \[$(tput sgr0)\]'
 
 GPG_TTY=$(tty)
 export GPG_TTY
