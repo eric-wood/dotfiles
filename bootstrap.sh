@@ -35,6 +35,14 @@ then
 	echo ". $PWD/bash_shenanigans.sh" >> ~/.bash_profile
 fi
 
+# Same for .zshrc
+if ! cat ~/.zshrc | grep -q ". $PWD/shell_shenanigans.sh"
+then
+	echo "Appending shell_shenanigans.sh to ~/.zshrc"
+	echo ". $PWD/shell_shenanigans.sh" >> ~/.zshrc
+  echo "source $PWD/.zshrc" >> ~/.zshrc
+fi
+
 echo "Setting up Vim and installing Vundle stuffs..."
 mkdir ~/.vim_swap
 . vundle_setup.sh

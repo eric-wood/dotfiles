@@ -33,20 +33,6 @@ branch_color ()
 
 export PS1='\[$(tput bold)\](\[$(tput setaf 4)\]\h\[$(tput sgr0)\])[\[$(branch_color)\]$(parse_git_branch)\[$(tput sgr0)\]] \w ⚡ \[$(tput sgr0)\]'
 
-GPG_TTY=$(tty)
-export GPG_TTY
-
-export CLICOLOR=1
-export LSCOLORS=Exfxcxdxcxegedabagacad
-export TERM=xterm-256color
-[[ $TERM == "screen" ]] && export -p TERM="screen-256color"
-
-export EDITOR=vim
-
-alias ll='ls -hal'
-alias evimrc='vim ~/.vimrc'
-alias gevimrc='gvim ~/.vimrc'
-alias bprofile='vim ~/.bash_profile'
-alias sbp='source ~/.bash_profile'
-
 set -o emacs
+
+. shell_shenanigans.sh
