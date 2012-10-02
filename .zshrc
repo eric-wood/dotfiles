@@ -26,10 +26,11 @@ zstyle ':vcs_info:*' enable git svn
 # When there's uncommitted changes, make the branch name red.
 # Otherwise, make it green.
 precmd () {
-  if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-      zstyle ':vcs_info:*' formats "[%{$fg[green]%}%b%{$reset_color%}]"
-  } else {
+  #if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+  if [[ ! "$(git status 2>/dev/null)" =~ 'nothing to commit' ]] {
       zstyle ':vcs_info:*' formats "[%{$fg[red]%}%b%{$reset_color%}]"
+  } else {
+      zstyle ':vcs_info:*' formats "[%{$fg[green]%}%b%{$reset_color%}]"
   }
 
   vcs_info
