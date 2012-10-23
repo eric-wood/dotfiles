@@ -1,6 +1,11 @@
 autoload -U compinit promptinit
 autoload -U colors && colors
 autoload -Uz vcs_info
+autoload -U edit-command-line
+
+# Edit commands in Vim :D
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 compinit
 promptinit
