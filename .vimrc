@@ -112,7 +112,6 @@ nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
 nmap <silent> <leader>t :ToggleBG<CR>
 nmap <silent> ^p :CtrlPMixed<CR>
-"nmap <silent> <leader>q :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 
 " When I have the brightness low I like to work with solarized light;
 " this keystroke makes it easy to switch to it on a whim
