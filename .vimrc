@@ -8,6 +8,13 @@ set showmatch
 set incsearch
 set ruler
 set wildmenu
+
+" Keep Vim from automaticall inserting linebreaks instead of wrapping
+set wrap
+set linebreak
+set nolist
+set textwidth=0
+set wrapmargin=0
 syntax enable
 
 compiler ruby
@@ -47,7 +54,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Bundle 'a.vim'
+" Disabling this until I can find a way to get rid of its insert mode bindings...
+"Bundle 'a.vim'
 
 "====================================
 
