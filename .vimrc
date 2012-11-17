@@ -85,8 +85,8 @@ if has("gui_running")
 	autocmd WinEnter * setlocal cursorline
 	autocmd WinLeave * setlocal nocursorline
   
-  colorscheme Tomorrow-Night-Eighties
-  set background=dark
+  "colorscheme Tomorrow-Night-Eighties
+  "set background=dark
   
   " Solarized toggle
   " I'm leaving this under the gVim-specific settings since it doesn't
@@ -98,18 +98,25 @@ else
 	set mouse=a
   
   " Solarized shenanigans
-  set background=dark
-  let g:solarized_termcolors=256
-  colorscheme solarized
+  "set background=dark
+  "let g:solarized_termcolors=256
+  "colorscheme solarized
 endif
 
+set background=dark
+colorscheme Tomorrow-Night-Eighties
+
 " For the git part of the statusline
-hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
+"hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
 
 " Statusline
 set laststatus=2
-set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
+"set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 "let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
+
+let g:Powerline_symbols = 'fancy'
+call Pl#Theme#RemoveSegment('fileencoding')
+call Pl#Theme#RemoveSegment('fileformat')
 
 "====================================
 " <leader> keystrokes and remappings
