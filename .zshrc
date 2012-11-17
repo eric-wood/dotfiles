@@ -46,3 +46,6 @@ PROMPT='(%{$fg[blue]%}%M%{$reset_color%})${vcs_info_msg_0_} %~ ${VIMODE} '
 
 # The little red bar makes it easier to see where my prompt was when reading scrollback!
 RPROMPT="%{$fg[red]%}%B|%{$reset_color%}"
+
+fpath=($HOME/.zsh/func $fpath)
+typeset -U fpath

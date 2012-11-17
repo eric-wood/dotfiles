@@ -54,6 +54,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'Lokaltog/vim-powerline'
 " Disabling this until I can find a way to get rid of its insert mode bindings...
 "Bundle 'a.vim'
 
