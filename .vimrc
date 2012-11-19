@@ -80,13 +80,6 @@ if has("gui_running")
   " it keeps the window from changing size when I open new tabs without
   " already having any open.
   set showtabline=2
-	
-	" For the supa cool cursor line!
-	autocmd WinEnter * setlocal cursorline
-	autocmd WinLeave * setlocal nocursorline
-  
-  "colorscheme Tomorrow-Night-Eighties
-  "set background=dark
   
   " Solarized toggle
   " I'm leaving this under the gVim-specific settings since it doesn't
@@ -98,18 +91,19 @@ else
 	set mouse=a
   
   " Solarized shenanigans
-  "set background=dark
-  "let g:solarized_termcolors=256
-  "colorscheme solarized
+  let g:solarized_termcolors=256
 endif
+	
+" For the supa cool cursor line!
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
 
 set background=dark
 colorscheme Tomorrow-Night-Eighties
 
-" For the git part of the statusline
-"hi User1 ctermbg=black ctermfg=white   guibg=black guifg=white
-
+"====================================
 " Statusline
+"====================================
 set laststatus=2
 "set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
 "let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
@@ -126,7 +120,7 @@ nmap <silent> <leader>p :NERDTreeToggle<CR>
 nmap <silent> <leader>s :setlocal spell! spelllang=en_us<CR>
 nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
-nmap <silent> <leader>t :ToggleBG<CR>
+nmap <silent> <leader>t :ToggleBG<CR> " only for use with solarized
 nmap <silent> ^p :CtrlPMixed<CR>
 
 " When I have the brightness low I like to work with solarized light;
@@ -158,4 +152,4 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.log$\|\.db$\'
   \ }
 
-let NERDTreeIgnore = ['\.o$']
+let NERDTreeIgnore = ['\.o$', '\.aux$', '\.make$', '\.fls$']
