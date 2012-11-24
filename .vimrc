@@ -147,9 +147,10 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 " Ignore stuff
+set wildignore+=*.swp,*.o,*.zip
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\.git$\|\.hg$\|\.svn$\',
-  \ 'file': '\.log$\|\.db$\'
+  \ 'file': '\v\.(db|o)$'
   \ }
 
 let NERDTreeIgnore = ['\.o$', '\.aux$', '\.make$', '\.fls$']
