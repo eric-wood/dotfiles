@@ -26,9 +26,6 @@ set cursorline
 " and keeps them out of the way.
 set directory^=$HOME/.vim_swap//,.
 
-" I'm tired of typing dt_
-set iskeyword-=_
-
 "====================================
 " Vundle
 "====================================
@@ -154,3 +151,4 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 let NERDTreeIgnore = ['\.o$', '\.aux$', '\.make$', '\.fls$']
+
