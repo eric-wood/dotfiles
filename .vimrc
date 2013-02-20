@@ -52,8 +52,9 @@ Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-powerline'
-" Disabling this until I can find a way to get rid of its insert mode bindings...
-"Bundle 'a.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
+Bundle 'cakebaker/scss-syntax.vim'
 
 "====================================
 
@@ -152,3 +153,9 @@ let g:ctrlp_custom_ignore = {
 
 let NERDTreeIgnore = ['\.o$', '\.aux$', '\.make$', '\.fls$']
 
+au BufNewFile,BufRead *.ejs,*.ejs.erb set filetype=javascript
+au BufRead,BufNewFile *.scss.erb set filetype=scss
+
+" 80 character line
+hi ColorColumn guibg=gray20
+set colorcolumn=80

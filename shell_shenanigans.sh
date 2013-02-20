@@ -17,3 +17,6 @@ alias evimrc='vim ~/.vimrc'
 alias gevimrc='gvim ~/.vimrc'
 alias bprofile='vim ~/.bash_profile'
 alias sbp='source ~/.bash_profile'
+
+# Recursive directory listing
+alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'''
