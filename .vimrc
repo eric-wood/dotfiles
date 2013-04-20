@@ -55,6 +55,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'scrooloose/syntastic'
 
 "====================================
 
@@ -120,6 +121,7 @@ nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
 nmap <silent> <leader>t :ToggleBG<CR> " only for use with solarized
 nmap <silent> ^p :CtrlPMixed<CR>
+nmap <silent> <leader>s :SyntasticToggle<CR>
 
 " When I have the brightness low I like to work with solarized light;
 " this keystroke makes it easy to switch to it on a whim
@@ -154,8 +156,12 @@ let g:ctrlp_custom_ignore = {
 let NERDTreeIgnore = ['\.o$', '\.aux$', '\.make$', '\.fls$']
 
 au BufNewFile,BufRead *.ejs,*.ejs.erb set filetype=javascript
+au BufRead,BufNewFile *.js.erb set filetype=javascript
 au BufRead,BufNewFile *.scss.erb set filetype=scss
 
 " 80 character line
 hi ColorColumn guibg=gray20
 set colorcolumn=80
+
+" Syntastic bar color
+hi SignColumn guibg=#2d2d2d
