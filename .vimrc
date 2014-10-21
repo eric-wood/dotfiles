@@ -48,14 +48,15 @@ Bundle 'mikewest/vimroom'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-surround'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'mustache/vim-mustache-handlebars'
 
 "====================================
 
@@ -121,7 +122,7 @@ nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>sv :source ~/.vimrc<CR>
 nmap <silent> <leader>t :ToggleBG<CR> " only for use with solarized
 nmap <silent> ^p :CtrlPMixed<CR>
-nmap <silent> <leader>s :SyntasticToggle<CR>
+"nmap <silent> <leader>s :SyntasticToggle<CR>
 
 " When I have the brightness low I like to work with solarized light;
 " this keystroke makes it easy to switch to it on a whim
