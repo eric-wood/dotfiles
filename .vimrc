@@ -57,6 +57,8 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 "====================================
 
