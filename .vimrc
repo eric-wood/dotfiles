@@ -126,7 +126,7 @@ nmap <silent> <leader>sv :source ~/.vimrc<CR>
 nmap <silent> <leader>t :ToggleBG<CR> " only for use with solarized
 nmap <silent> ^p :CtrlPMixed<CR>
 nmap <silent> <leader>g :GitGutterToggle<CR>
-"nmap <silent> <leader>s :SyntasticToggle<CR>
+nmap <silent> <leader>v :set paste!<CR>
 
 " When I have the brightness low I like to work with solarized light;
 " this keystroke makes it easy to switch to it on a whim
