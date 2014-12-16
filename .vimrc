@@ -49,13 +49,14 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tomasr/molokai'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+" THEY CHANGED IT! Ugh. Forking.
+"Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
+Bundle 'hail2u/vim-css3-syntax'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'hail2u/vim-css3-syntax'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
