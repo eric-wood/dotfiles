@@ -60,8 +60,18 @@ Bundle 'tpope/vim-surround'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/syntastic'
+Bundle 'ap/vim-css-color'
+Bundle 'mileszs/ack.vim'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'heartsentwined/vim-emblem'
 
 "====================================
+
+" ignore silly things w/ ack!
+let g:ack_autoclose=1
+"let g:ack_default_options=' --ignore-dir=log/ --ignore-dir=node_modules/ --ignore-dir=tmp/'
 
 filetype plugin indent on " for some reason this needs to be next...
 
@@ -127,6 +137,9 @@ nmap <silent> <leader>t :ToggleBG<CR> " only for use with solarized
 nmap <silent> ^p :CtrlPMixed<CR>
 nmap <silent> <leader>g :GitGutterToggle<CR>
 nmap <silent> <leader>v :set paste!<CR>
+nmap <leader>a :Ack!<space>
+nmap "" cs'"
+nmap '' cs"’
 
 " When I have the brightness low I like to work with solarized light;
 " this keystroke makes it easy to switch to it on a whim
@@ -142,19 +155,19 @@ nnoremap <S-Return> O<Esc>
 
 " Stop using these, you lazy bastard!!
 " Disables arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
 
 " Ignore stuff
 set wildignore+=*.swp,*.o,*.zip
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\.git$\|\.hg$\|\.svn$\',
+  \ 'dir': '\.git$\|\.hg$\|\.svn$\|node_modules',
   \ 'file': '\v\.(db|o)$'
   \ }
 
@@ -170,3 +183,14 @@ set colorcolumn=80
 
 " Syntastic bar color
 hi SignColumn guibg=#2d2d2d
+
+let g:syntastic_enable_signs = 1
+
+command! Sublime silent !~/bin/subl %:p
+
+"function Slack() range
+"  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).'| pbcopy ')
+"endfunction
+"
+"command! Slack silent !pbpaste | ~/.gem/ruby/2.1.6/bin/slackcat 
+
