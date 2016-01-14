@@ -34,38 +34,35 @@ set directory^=$HOME/.vim_swap//,.
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'	
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-markdown'
-Bundle 'mikewest/vimroom'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tomasr/molokai'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kien/ctrlp.vim'
+call plug#begin('~/.vim/plugged')
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-markdown'
+Plug 'mikewest/vimroom'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tomasr/molokai'
+Plug 'altercation/vim-colors-solarized'
+Plug 'kien/ctrlp.vim'
 " THEY CHANGED IT! Ugh. Forking.
-"Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'pangloss/vim-javascript'
-Bundle 'briancollins/vim-jst'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'Xuyuanp/nerdtree-git-plugin'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'scrooloose/syntastic'
-Bundle 'ap/vim-css-color'
-Bundle 'mileszs/ack.vim'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'heartsentwined/vim-emblem'
+"Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plug 'tpope/vim-fugitive'
+Plug 'pangloss/vim-javascript'
+Plug 'briancollins/vim-jst'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-surround'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'kchmck/vim-coffee-script'
+Plug 'scrooloose/syntastic'
+Plug 'ap/vim-css-color'
+Plug 'mileszs/ack.vim'
+Plug 'elixir-lang/vim-elixir'
+Plug 'heartsentwined/vim-emblem'
+Plug 'vim-airline/vim-airline'
+call plug#end()
 
 "====================================
 
@@ -79,16 +76,17 @@ let g:tex_flavor='latex'
 
 " For gVim or MacVim...
 if has("gui_running")
+  set guifont=Meslo_LG_S_for_Powerline
 	set ofu=syntaxcomplete#Complete
 	set guioptions-=T
-	
+
 	" No clue why you have to set and remove the scrollbars
 	" for this to work in gVim, but that's how it is :(
 	set guioptions+=LlRrb
 	set guioptions-=LlRrb
 	set go-=L
 	set showtabline=1
-  
+
   " In gVim/MacVim I prefer to have the tab bar always shown
   " it keeps the window from changing size when I open new tabs without
   " already having any open.
@@ -118,12 +116,10 @@ colorscheme Tomorrow-Night-Eighties
 " Statusline
 "====================================
 set laststatus=2
-"set statusline=\ %{winnr()}\ %m%r\ %f%=%l,%c\ %P\ %y%{fugitive#statusline()}
-"let g:smartusline_hi_normal = 'guifg=#CCCCCC guibg=#202020 ctermfg=white ctermbg=darkgray'
-
-let g:Powerline_symbols = 'fancy'
-call Pl#Theme#RemoveSegment('fileencoding')
-call Pl#Theme#RemoveSegment('fileformat')
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
 
 "====================================
 " <leader> keystrokes and remappings
