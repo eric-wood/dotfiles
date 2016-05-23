@@ -1,3 +1,11 @@
 *.swp
 *.DS_Store
 .vim/bundle
+
+.atom/packages
+.atom/blob-store
+.atom/compile-cache
+.atom/storage
+.atom/.node-gyp
+.atom/dev
+.atom/.apm

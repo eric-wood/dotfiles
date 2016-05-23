@@ -1,0 +1,76 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "c3e468ca-1995-4acd-81b9-4e5456a27735"
+  "atom-material-ui":
+    colors:
+      abaseColor:
+        red: 33
+        green: 150
+        blue: 243
+        alpha: 1
+      genAccent: true
+      predefinedColor: "Blue"
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  core:
+    allowPendingPaneItems: false
+    disabledPackages: [
+      "linter"
+      "linter-jshint"
+    ]
+    projectHome: "/Users/ericwood/"
+    themes: [
+      "atom-material-ui"
+      "tomorrow-night-eighties-syntax"
+    ]
+  editor:
+    fontFamily: "Menlo"
+    invisibles: {}
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "47562e5a-9a4c-2168-f523-f03a585c619f"
+  "file-icons":
+    coloured: false
+    tabPaneIcon: false
+  "find-and-replace":
+    closeFindPanelAfterSearch: true
+    scrollToResultOnLiveSearch: true
+  jshint:
+    supportLintingJsx: true
+    validateOnlyOnSave: true
+  linter:
+    showErrorPanel: false
+    statusIconPosition: "Right"
+    statusIconScope: "File"
+  "linter-jshint": {}
+  minimap:
+    plugins:
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+  "one-dark-ui":
+    layoutMode: "Compact"
+  "one-light-ui": {}
+  pigments: {}
+  "theme-toggler":
+    darkSyntaxTheme: "tomorrow-night-eighties-syntax"
+    darkUiTheme: "one-dark-ui"
+    lightSyntaxTheme: "solarized-light-syntax"
+    lightUiTheme: "one-light-ui"
+  "tree-view":
+    autoReveal: true
+    focusOnReveal: false
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
+  welcome:
+    showOnStartup: false
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
