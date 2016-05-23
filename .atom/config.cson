@@ -19,7 +19,6 @@
       panelContrast: true
       panelShadows: true
   core:
-    allowPendingPaneItems: false
     disabledPackages: [
       "linter"
       "linter-jshint"
@@ -58,6 +57,9 @@
   "one-dark-ui":
     layoutMode: "Compact"
   "one-light-ui": {}
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   pigments: {}
   "theme-toggler":
     darkSyntaxTheme: "tomorrow-night-eighties-syntax"
@@ -71,6 +73,3 @@
     useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
-  "package-sync":
-    createOnChange: true
-    forceOverwrite: true
